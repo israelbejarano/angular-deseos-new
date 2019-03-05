@@ -6,9 +6,13 @@ import { Lista } from '../models/lista.model';
 })
 export class DeseosService {
 
-  lista: Lista[] = [];
+  listas: Lista[] = [];
 
   constructor() {
     console.log('Servicio inicializando');
+    const lista1 = new Lista('Recolectar piedras del infinito');
+    const lista2 = new Lista('Heroes a desaparecer');
+    this.listas.push(lista1, lista2);
+    console.log(this.listas);
   }
 }
